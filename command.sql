@@ -53,6 +53,31 @@ SELECT * FROM Customers WHERE CustomerName NOT LIKE 'A%';
   SELECT * FROM Customers WHERE CustomerID NOT BETWEEN 10 AND 60;
   SELECT * FROM Customers WHERE CustomerName NOT BETWEEN 'A' AND 'J';
 
+  NOT IN
+  SELECT * FROM Customers WHERE City NOT IN ('Paris', 'Berlin');
+
+  SELECT * FROM Customers WHERE NOT CustomerID > 50;
+  SELECT * FROM Customers WHERE NOT CustomerID < 50;
+
+8. INSERT INTO
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Tom','Berlin','Germany')
+
+9. NULL
+-- Null is added when we don't add any value to column, it is not zero or empty space, so to test for null we need
+IS NULL , IS NOT NULL
+SELECT CustomerName FROM Customers WHERE City is NOT NULL;
+SELECT CustomerName, ContactName, Address FROM Customers WHERE Address IS NULL;
+  
+10. UPDATE
+UPDATE Customers SET CustomerName = 'Shadab', City = 'Miraj' WHERE CustomerID = 1;
+UPDATE Customers SET ContactName='Juan' WHERE Country='Mexico';
+Always put WHERE otherwise it will updat all the columns in the table
+
+11. DELETE
 
 
 
