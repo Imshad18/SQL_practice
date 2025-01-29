@@ -1,4 +1,4 @@
-SQL is case insensitive, still I will use all caps for SQL keywords
+--SQL (Structured Query Language) is case insensitive, still I will use all caps for SQL keywords
 
 -- We have tables called Customers & Products, they have many columns like CustomerID, CustomerName, City, etc
 
@@ -79,7 +79,7 @@ Always put WHERE otherwise it will updat all the columns in the table
 
 11. DELETE
 DELETE FROM customers WHERE customerName = 'shadab';  -- again WHERE is important
-To DELETE all rowas without deleting the column 
+To DELETE all rows without deleting the column 
 DELETE FROM table_name;
 DELETE FROM Customers;
 
@@ -92,6 +92,14 @@ SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
   Min():  SELECT MIN (Price) FROM Products;
   Max(): SELECT MAX (Price) FROM Products;
   SELECT MIN(Price) AS SmallestPrice FROM Products;  -- this gives the resulting column a name as SmallestPrice
+  SELECT MIN(Price) AS SmallestPrice, CategoryID FROM Products GROUP BY CategoryID;  -- we will learn about Group By later
+
+  COUNT():
+  SELECT COUNT(*) FROM Customers;
+  SELECT COUNT(ProductName) FROM Products WHERE Price > 20;
+  SELECT COUNT(DISTINCT Price) FROM Products; -- removes repeated/same entries
+Alias: SELECT COUNT(*) AS [Number of records] FROM Products;
+  SELECT COUNT(*) AS [Number of records], CategoryID FROM Products GROUP BY CategoryID;
 
 
 
