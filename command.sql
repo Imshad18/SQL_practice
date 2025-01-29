@@ -78,8 +78,15 @@ UPDATE Customers SET ContactName='Juan' WHERE Country='Mexico';
 Always put WHERE otherwise it will updat all the columns in the table
 
 11. DELETE
+DELETE FROM customers WHERE customerName = 'shadab';  -- again WHERE is important
+To DELETE all rowas without deleting the column 
+DELETE FROM table_name;
+DELETE FROM Customers;
 
-
+12. TOP
+--  Not all database systems support the SELECT TOP clause. MySQL supports the LIMIT clause to select a limited number of records, while Oracle uses FETCH FIRST n ROWS ONLY and ROWNUM.
+SELECT TOP 3 * FROM Customers WHERE Country = 'Germany';
+SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
 
 
 
