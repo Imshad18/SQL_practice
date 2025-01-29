@@ -88,6 +88,10 @@ DELETE FROM Customers;
 SELECT TOP 3 * FROM Customers WHERE Country = 'Germany';
 SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
 
+13. Aggregate Functions
+  Min():  SELECT MIN (Price) FROM Products;
+  Max(): SELECT MAX (Price) FROM Products;
+  SELECT MIN(Price) AS SmallestPrice FROM Products;  -- this gives the resulting column a name as SmallestPrice
 
 
 
