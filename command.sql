@@ -1,6 +1,6 @@
 SQL is case insensitive, still I will use all caps for SQL keywords
 
--- We have tables called Customers & Products which has many columns like CustomerID, CustomerName, City, etc
+-- We have tables called Customers & Products, they have many columns like CustomerID, CustomerName, City, etc
 
 1. SELECT  
 SELECT * FROM Customers;   -- this is SELECT Everything
@@ -38,6 +38,8 @@ SELECT * FROM Customers ORDER BY Country, CustomerName;   -- here if country nam
 5. AND
 SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
 
+Mixing AND and OR
+SELECT * FROM Customers WHERE country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
 
 
 
