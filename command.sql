@@ -39,7 +39,20 @@ SELECT * FROM Customers ORDER BY Country, CustomerName;   -- here if country nam
 SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
 
 Mixing AND and OR
-SELECT * FROM Customers WHERE country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+SELECT * FROM Customers WHERE country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');  -- this gives only Spain results
+SELECT * FROM Customers WHERE country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%'; -- this without brackets gives all entires that start with G from Sapin but also all entieres starting with R from all countries
+
+6. OR
+SELECT * FROM Customers WHERE country = 'Spain' OR country = 'Germany';
+
+7. NOT
+SELECT * FROM Customers WHERE NOT Country = 'Spain';
+SELECT * FROM Customers WHERE CustomerName NOT LIKE 'A%';
+
+  NOT BETWEEN
+  SELECT * FROM Customers WHERE CustomerID NOT BETWEEN 10 AND 60;
+  SELECT * FROM Customers WHERE CustomerName NOT BETWEEN 'A' AND 'J';
+
 
 
 
