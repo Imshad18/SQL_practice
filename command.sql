@@ -101,6 +101,9 @@ SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
 Alias: SELECT COUNT(*) AS [Number of records] FROM Products;
   SELECT COUNT(*) AS [Number of records], CategoryID FROM Products GROUP BY CategoryID;
 
+  SUM():
+  SELECT SUM(Quantity) FROM OrderDetails;
+
 
 
 
